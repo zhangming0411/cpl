@@ -9,6 +9,7 @@ int main(int argc, char const *argv[])
     upper = 300;
     step = 20;
 
+    printf("我是一个标题啦啦啦\n");
     fahr = lower;
     while (fahr <= upper)
     {
