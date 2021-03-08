@@ -3,6 +3,10 @@
 #define IN 1
 #define OUT 2
 #define MAXWORDLEN 100
+#define LEN 500
+
+char array[LEN];
+void make_line(int n);
 
 int main(int argc, char const *argv[])
 {
@@ -29,8 +33,19 @@ int main(int argc, char const *argv[])
     if (state == IN && len > 0)
         wordLenRecord[len] += 1;
     for (i = 0; i < MAXWORDLEN; i++) {
-        if (wordLenRecord[i])
-            printf("len of %d: %d\n", i, wordLenRecord[i]);
+        if (wordLenRecord[i]) {
+            // printf("len of %d: %d\n", i, wordLenRecord[i]);
+            make_line(wordLenRecord[i]);
+            printf("%d:%s\n", i, array);
+        }
     }
     return 0;
+}
+
+void make_line(int n)
+{
+    int i;
+    for (i = 0; i < n; i++)
+        array[i] = '=';
+    array[i] = '\0';
 }

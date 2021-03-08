@@ -54,3 +54,5 @@ dkms.conf
 # 自定义asst文件
 *.asst
 
+#VSCode
+.vscode
