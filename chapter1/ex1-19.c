@@ -12,15 +12,14 @@ int main(int argc, char const *argv[])
     while ((c = getchar()) != EOF)
     {
         s[i] = c;
-        if ((c == '\n') || (i >= MAXLINE)) {
+        i++;
+        if ((c == '\n') || (i >= MAXLINE-1)) {
             s[i] = '\0';
             // printf("%s", s);
             reverse(s);
             printf("%s\n", s);
             i = 0;
-            continue;
         }
-        i++;
     }
     return 0;
 }
